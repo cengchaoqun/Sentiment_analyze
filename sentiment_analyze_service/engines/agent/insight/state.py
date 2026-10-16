@@ -1,5 +1,7 @@
-from atguigu.engines.contract.evidence import RetrievedEvidence
-from atguigu.engines.contract.state import ResearchGraphState, SectionState
+
+from sentiment_analyze_service.engines.contract.state import ResearchGraphState, SectionState
+
+from sentiment_analyze_service.engines.contract.evidence import RetrievedEvidence
 
 
 class InsightState(ResearchGraphState[SectionState], total=False):  # type: ignore

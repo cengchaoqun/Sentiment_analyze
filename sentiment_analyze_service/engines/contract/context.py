@@ -3,8 +3,9 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Any, Mapping, Callable
-from atguigu.engines.common.llm import LLMClient
-from atguigu.engines.contract.role import RoleId
+
+from sentiment_analyze_service.engines.common.llm import LLMClient
+from sentiment_analyze_service.engines.contract.role import RoleID
 
 
 @dataclass(slots=True)
@@ -12,7 +13,7 @@ class ResearchRunContext:
     """单次 Insight/Media 研究运行所需的共享外部数据"""
     task_id: str
     query: str
-    role: RoleId
+    role: RoleID
     llm_client: LLMClient
     output_dir: str
 
